@@ -16,11 +16,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--black);
   border: none;
   outline: none;
   text-decoration: none;
   list-style-type: none;
+  font-family: var(--poppins);
 }
 
 body {
@@ -29,4 +29,60 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* =============================== BASE ===============================*/
+header {
+  width: 100%;
+  background-color: var(--black);
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+  color: var(--white);
+  font-size: 2rem;
+  margin-inline: 2rem;
+  column-gap: 2rem;
+}
+
+header .title .title-text {
+  font-family: var(--gorditas);
+}
+
+.search-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4rem;
+  margin-inline: 8rem;
+}
+
+.search-container input {
+  width: 30rem;
+  padding-block: 1rem;
+  background: transparent;
+  border-radius: 2rem;
+  border: 2px solid var(--white);
+  text-indent: 2rem;
+  color: var(--white);
+}
+
+.search-container input::placeholder {
+  text-indent: 2rem;
+  color: var(--white);
+}
+
+.search-container button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: var(--white);
 }
