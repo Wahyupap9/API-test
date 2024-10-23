@@ -20,11 +20,22 @@
   outline: none;
   text-decoration: none;
   list-style-type: none;
+}
+
+a,
+p,
+b,
+h1 {
   font-family: var(--poppins);
 }
 
+i {
+  font-family: initial;
+  font-size: 3rem;
+}
+
 body {
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 html {
@@ -39,6 +50,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 header .title {
@@ -46,7 +58,7 @@ header .title {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 20%;
+  width: 25%;
   color: var(--white);
   font-size: 2rem;
   margin-inline: 2rem;
@@ -85,4 +97,64 @@ header .title .title-text {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   background: var(--white);
+}
+
+/* MAIN */
+.container-movies {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  gap: 3rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.movie {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.movie .container-image {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.movie .container-image img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.movie .info {
+  height: 30%;
+  width: 100%;
+  color: var(--white);
+}
+
+.movie .info .title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.movie .info .yearType {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie button {
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--black);
+  border-radius: 1rem;
 }
