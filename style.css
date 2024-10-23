@@ -158,3 +158,8 @@ header .title .title-text {
   color: var(--black);
   border-radius: 1rem;
 }
+
+#notFound {
+  text-align: center;
+  color: var(--white);
+}
