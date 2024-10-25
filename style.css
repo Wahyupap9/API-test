@@ -39,6 +39,7 @@ body {
 }
 
 html {
+  scrollbar-width: none;
   scroll-behavior: smooth;
 }
 
@@ -171,10 +172,11 @@ header .title .title-text {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
 
 .popup {
@@ -187,7 +189,8 @@ header .title .title-text {
   row-gap: 0.5rem;
   border-radius: 1rem;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: -100;
 }
 
 .popup .close-button {
@@ -212,10 +215,13 @@ header .title .title-text {
 
 .popup .text table {
   margin-block: 0.5rem;
+  font-family: var(--poppins);
 }
 
 .popup .text table th {
   text-align: left;
+  display: flex;
+  align-items: start;
   padding: 0.2rem 0.5rem;
 }
 
@@ -227,5 +233,5 @@ header .title .title-text {
 }
 
 .dNone {
-  /* display: none; */
+  display: none;
 }
