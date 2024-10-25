@@ -1,10 +1,11 @@
 $("#searchButton").on("click", function (event) {
+  $(".container-movies").html("");
+  $("#notFound").html("");
   getMovies();
+  document.querySelector("#searchInput").value = "";
 });
 
 function getMovies() {
-  $(".container-movies").html("");
-  $("#notFound").html("");
   const keyword = $("#searchInput").val();
   $.ajax({
     url: `http://www.omdbapi.com/?apikey=1837682f&s=${keyword}`,
@@ -48,5 +49,10 @@ function htmlMovies(datas) {
 document.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
     getMovies();
+    document.querySelector("#searchInput").value = "";
   }
 });
+
+fetch("http://www.omdbapi.com/?apikey=1837682f&i=tt1490017")
+  .then((response) => response.json())
+  .then((response) => console.log(response));
